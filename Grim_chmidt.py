@@ -47,11 +47,11 @@ def family_vectors(n,m):
 # Initialiser le dictionnaire pour stocker les vecteurs
           g =dict()
           for i in range(n):
-          g[i] = []
-          print(f"Pour le vecteur {i + 1}")
-          for k in range(m):
-              j = float(input(f"Donner la coordonnée {k + 1}: "))
-              g[i].append(j)
+             g[i] = []
+             print(f"Pour le vecteur {i + 1}")
+             for k in range(m):
+                j = float(input(f"Donner la coordonnée {k + 1}: "))
+                g[i].append(j)
           d= [g[i] for i in range (n)]
           return d
 family_vectors(n,m)
@@ -59,8 +59,8 @@ d1= family_vectors(n,m)
 while True: 
   if est_liee(d1)==True:
      print(f"votre famille {d1} est liée")
-     n= int(input("donner le cardinal")
-     m= int(input("donner le nombre de coordonnées ")
+     n= int(input("donner le cardinal"))
+     m= int(input("donner le nombre de coordonnées "))
      family_vectors()
      d1= family_vectors
      if est_liee(d1)==False:
