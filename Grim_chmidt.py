@@ -51,7 +51,8 @@ for i in range(n):
         g[i].append(j)
 d= [g[i] for i in range (n)]
 if est_liee(d)==True:
-   d=find_linearly_independent_subset(d) 
+  print(f"votre famille {d} est liée")
+  d=find_linearly_independent_subset(d) 
 if n< m :
     for o in range (n,m-n):
         while True :
