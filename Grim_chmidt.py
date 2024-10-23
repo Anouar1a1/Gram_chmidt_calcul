@@ -42,7 +42,7 @@ while n>m:
     n = int(input("Donner le cardinal de votre famille: "))
     m= int(input("Donner le nombre de coordonnées: "))
 # Initialiser le dictionnaire pour stocker les vecteurs
-d = []
+d =dict()
 for i in range(n):
     d[i] = []
     print(f"Pour le vecteur {i + 1}")
