@@ -42,13 +42,14 @@ while n>m:
     n = int(input("Donner le cardinal de votre famille: "))
     m= int(input("Donner le nombre de coordonnées: "))
 # Initialiser le dictionnaire pour stocker les vecteurs
-d =dict()
+g =dict()
 for i in range(n):
-    d[i] = []
+    g[i] = []
     print(f"Pour le vecteur {i + 1}")
     for k in range(m):
         j = float(input(f"Donner la coordonnée {k + 1}: "))
-        d[i].append(j)
+        g[i].append(j)
+d= [g[i] for i in range (n)]
 if est_liee(d)==True:
    d=find_linearly_independent_subset(d) 
 if n< m :
