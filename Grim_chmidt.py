@@ -28,14 +28,6 @@ def est_liee(vecteurs):
   rang = np.linalg.matrix_rank(matrice)
   nombre_vecteurs = matrice.shape[0]
   return rang < nombre_vecteurs
-"""
-def find_linearly_independent_subset(vectors):
-    matrix = np.array(vectors)
-    rank = np.linalg.matrix_rank(matrix)
-    Vh = np.linalg.svd(matrix)
-    basis = Vh[:rank].T
-    return basis.tolist()
-"""
 # Demander les entrées utilisateur
 n = int(input("Donner le cardinal de votre famille: "))
 m= int(input("Donner le nombre de coordonnées: "))
