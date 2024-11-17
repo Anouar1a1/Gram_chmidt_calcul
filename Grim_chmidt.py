@@ -28,26 +28,32 @@ def est_liee(vecteurs):
   rang = np.linalg.matrix_rank(matrice)
   nombre_vecteurs = matrice.shape[0]
   return rang < nombre_vecteurs
+def debut():
 # Demander les entrées utilisateur
-n = int(input("Donner le cardinal de votre famille: "))
-m= int(input("Donner le nombre de coordonnées: "))
-while n>m:
-    print(f"Un de ces valeurs et erronne car{n} le nombre du cardinal est superieur a {m}le nombre de coordonnees ")
     n = int(input("Donner le cardinal de votre famille: "))
     m= int(input("Donner le nombre de coordonnées: "))
+    while n>m:
+        print(f"Un de ces valeurs et erronne car{n} le nombre du cardinal est superieur a {m}le nombre de coordonnees ")
+        n = int(input("Donner le cardinal de votre famille: "))
+        m= int(input("Donner le nombre de coordonnées: "))
 # Initialiser le dictionnaire pour stocker les vecteurs
-g =dict()
-for i in range(n):
-    g[i] = []
-    print(f"Pour le vecteur {i + 1}")
-    for k in range(m):
-        j = float(input(f"Donner la coordonnée {k + 1}: "))
-        g[i].append(j)
-d= [g[i] for i in range (n)]
-if est_liee(d)==True:
-   print(f"votre famille{d} est liee")
-  # d=find_linearly_independent_subset(d) 
-if n< m :
+    g =dict()
+    for i in range(n):
+        g[i] = []
+        print(f"Pour le vecteur {i + 1}")
+        for k in range(m):
+            j = float(input(f"Donner la coordonnée {k + 1}: "))
+            g[i].append(j)
+    d= [g[i] for i in range (n)]
+while true :
+    debut()
+    if est_liee(d)==True:
+        print(f"votre famille{d} est liee")
+        continue
+    else:
+        break
+w= int(input("\n donner 0 pour continuer sans ajouter d'autre vecteurs,1si vous vouler toucher tout l'espace vectoriel"))
+if w:
     for o in range (n,m-n):
         while True :
             e =0
