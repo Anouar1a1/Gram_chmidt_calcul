@@ -51,12 +51,14 @@ if n< m :
     for o in range (n,m-n):
         while True :
             e =0
+            g=0
             kc= [random.randint(-100,100) for j in range (m)]
             for h in range (n):
                 if p (kc,d[h])==0 and kc!=[0 for j in range (m)]:
                    e+=1
             if e >= n:
                 d[o]=kc
+                break  
 print(d)
 # Initialiser les listes
 L_u = []
